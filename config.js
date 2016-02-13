@@ -1,6 +1,6 @@
 var leaveScale = {
   grabStrength: 0,
-  grabValue: 0,
+  grabValue: -1,
   powerValue: 0
 };
 
