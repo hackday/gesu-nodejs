@@ -5,6 +5,10 @@ var leaveScale = {
 };
 
 module.exports = {
+  arduino: {
+    serialPort: "/dev/cu.usbmodem1421",
+    baudrate: 115200
+  },
   socketIoPort: 8081,
   initialScale: leaveScale,
   leaveScale: leaveScale,

@@ -7,8 +7,8 @@ var config = require('./config'),
 
 child_process.spawn('sh', ['-c', 'echo "configured inet addresses:"; ifconfig | grep "inet "'], {stdio: 'inherit'});
 
-var arduino = new ArduinoController("/dev/tty.usbmodem1421", {
-  baudrate: 115200
+var arduino = new ArduinoController(config.arduino.serialPort, {
+  baudrate: config.arduino.baudrate
 });
 
 if (process.env.hasOwnProperty('ARDUINO_DEBUG')) {
