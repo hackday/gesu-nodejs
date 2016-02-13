@@ -17,6 +17,14 @@ if (process.env.hasOwnProperty('ARDUINO_DEBUG')) {
   });
 }
 
+arduino.on('disconnect', function () {
+  console.log('disconnect from arduino; reconnect in 2000ms...');
+});
+
+arduino.on('open', function () {
+  console.log('connected to arduino!');
+});
+
 var app = new AppConnector(config.socketIoPort, ['switch']);
 var leapMotion = new LeapMotionHandler(config);
 
