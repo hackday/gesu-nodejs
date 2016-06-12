@@ -40,7 +40,7 @@ module.exports = {
       powerValue: 98
     },
     {
-      grabStrength: 0.5,
+      grabStrength: 0.45,
       grabValue: 2,
       powerValue: 128
     },
